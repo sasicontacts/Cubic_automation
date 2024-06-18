@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/reporting.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber-JVM Reports  - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber-JVM Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="feature-overview.html">Features</a></li>
+        <li role="presentation" ><a href="tag-overview.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="step-overview.html">Steps</a></li>
+        <li role="presentation" ><a href="failures-overview.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" id="build-info">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-1">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Project</th>
+                          <th>Number</th>
+                        <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="info">
+            <td>CucumberCubic</td>
+                          <td>1</td>
+                        <td>11 Jun 2024, 14:13</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div id="report-lead" class="container-fluid>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <h2>Steps Statistics</h2>
+              <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+          </div>
+  </div>
+</div>
+
+<div class="container-fluid" id="summary">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+              <table id="tablesorter" class="stats-table table-hover">
+
+          <thead>
+            <tr class="header">
+              <th>Implementation</th>
+              <th>Occurrences</th>
+              <th>Duration</th>
+              <th>Average</th>
+              <th>Ratio</th>
+            </tr>
+          </thead>
+
+          <tbody>
+                          <tr>
+                <td class="location">StepDefinitions.CubicConfigurationPage.configuration_page_displayed_correctly(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="15521800">015ms</td>
+                <td class="duration" data-value="15521800">015ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicConfigurationPage.user_click_the_menu()</td>
+                <td>1</td>
+                <td class="duration" data-value="236110000">236ms</td>
+                <td class="duration" data-value="236110000">236ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicConfigurationPage.user_clicks_back_to_rapport()</td>
+                <td>1</td>
+                <td class="duration" data-value="2061537200">2s 061ms</td>
+                <td class="duration" data-value="2061537200">2s 061ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicConfigurationPage.user_in_home_page(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="94630600">094ms</td>
+                <td class="duration" data-value="94630600">094ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicConfigurationPage.user_navigates_to_the_configuration_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="7673467600">7s 673ms</td>
+                <td class="duration" data-value="7673467600">7s 673ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicConfigurationPage.user_select_the_configuration(java.lang.String)</td>
+                <td>7</td>
+                <td class="duration" data-value="42888055500">42s 888ms</td>
+                <td class="duration" data-value="6126865071">6s 126ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicConfigurationPage.user_validate_the_title(java.lang.String)</td>
+                <td>7</td>
+                <td class="duration" data-value="323799700">323ms</td>
+                <td class="duration" data-value="46257100">046ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicContactPage.contact_page_created()</td>
+                <td>1</td>
+                <td class="duration" data-value="1088400">001ms</td>
+                <td class="duration" data-value="1088400">001ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicContactPage.user_creates_new_contact()</td>
+                <td>1</td>
+                <td class="duration" data-value="54764124000">54s 764ms</td>
+                <td class="duration" data-value="54764124000">54s 764ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicContactPage.user_navigates_contact_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="5130043200">5s 130ms</td>
+                <td class="duration" data-value="5130043200">5s 130ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicLogoutPage.user_successfully_logged_out_from_the_site()</td>
+                <td>1</td>
+                <td class="duration" data-value="6812204300">6s 812ms</td>
+                <td class="duration" data-value="6812204300">6s 812ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicProjectPage.project_created()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicProjectPage.user_enter_details()</td>
+                <td>1</td>
+                <td class="duration" data-value="44976800800">44s 976ms</td>
+                <td class="duration" data-value="44976800800">44s 976ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicProjectPage.user_lands_project_page(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="1557000">001ms</td>
+                <td class="duration" data-value="1557000">001ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicProjectPage.user_selects_project_admin(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="15281615300">15s 281ms</td>
+                <td class="duration" data-value="15281615300">15s 281ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicSalesPage.check_error_message_displayed()</td>
+                <td>1</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="duration" data-value="0">000ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicSalesPage.check_sales_invoice_displayed_correctly(java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="187750000">187ms</td>
+                <td class="duration" data-value="93875000">093ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicSalesPage.sales_invoice_created_correctly(java.lang.String)</td>
+                <td>2</td>
+                <td class="duration" data-value="4532256100">4s 532ms</td>
+                <td class="duration" data-value="2266128050">2s 266ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicSalesPage.user_enter_all_the_fields(java.lang.String,java.lang.String,java.lang.String,java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="36215845400">36s 215ms</td>
+                <td class="duration" data-value="36215845400">36s 215ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicSalesPage.user_enter_few_fields(java.lang.String,java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="31198023900">31s 198ms</td>
+                <td class="duration" data-value="31198023900">31s 198ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicSalesPage.user_enter_missing_info(java.lang.String,java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="10633752600">10s 633ms</td>
+                <td class="duration" data-value="10633752600">10s 633ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicSalesPage.user_naviagtes_to_the_home_page()</td>
+                <td>2</td>
+                <td class="duration" data-value="11194637000">11s 194ms</td>
+                <td class="duration" data-value="5597318500">5s 597ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicSalesPage.user_navigates_to_the_sales_invoice()</td>
+                <td>2</td>
+                <td class="duration" data-value="7979910900">7s 979ms</td>
+                <td class="duration" data-value="3989955450">3s 989ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicSalesPage.user_select_ok()</td>
+                <td>1</td>
+                <td class="duration" data-value="6115320500">6s 115ms</td>
+                <td class="duration" data-value="6115320500">6s 115ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicSalesPage.user_selects_create()</td>
+                <td>3</td>
+                <td class="duration" data-value="6365754200">6s 365ms</td>
+                <td class="duration" data-value="2121918066">2s 121ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.CubicSalesPage.user_submit_sales_invoice()</td>
+                <td>2</td>
+                <td class="duration" data-value="6913160500">6s 913ms</td>
+                <td class="duration" data-value="3456580250">3s 456ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.HomePageSteps.browser_is_open()</td>
+                <td>1</td>
+                <td class="duration" data-value="4211108000">4s 211ms</td>
+                <td class="duration" data-value="4211108000">4s 211ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.HomePageSteps.user_cubic_home_page()</td>
+                <td>1</td>
+                <td class="duration" data-value="25472066300">25s 472ms</td>
+                <td class="duration" data-value="25472066300">25s 472ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.HomePageSteps.user_in_home_page(java.lang.String)</td>
+                <td>1</td>
+                <td class="duration" data-value="21125200">021ms</td>
+                <td class="duration" data-value="21125200">021ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QuickMenu.user_naviages_to_the_logout_icon()</td>
+                <td>1</td>
+                <td class="duration" data-value="3830812100">3s 830ms</td>
+                <td class="duration" data-value="3830812100">3s 830ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                          <tr>
+                <td class="location">StepDefinitions.QuickMenu.user_selected_project_menu()</td>
+                <td>1</td>
+                <td class="duration" data-value="3438193200">3s 438ms</td>
+                <td class="duration" data-value="3438193200">3s 438ms</td>
+                <td class="passed">100.00%</td>
+              </tr>
+                      </tbody>
+
+          <tfoot class="total">
+            <tr>
+              <td>31</td>
+              <td>50</td>
+              <td class="duration">5m 38s 570ms</td>
+              <td class="duration">6s 771ms</td>
+              <td>Totals</td>
+            </tr>
+          </tfoot>
+
+        </table>
+          </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
